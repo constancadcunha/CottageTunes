@@ -14,7 +14,7 @@ struct SongRow: View {
     
     var body: some View {
         HStack(spacing: 16) {
-            // Album art placeholder
+            
             Image(systemName: "music.note")
                 .frame(width: 50, height: 50)
                 .background(Color("CottageRose"))
