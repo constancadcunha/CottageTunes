@@ -2,13 +2,13 @@ import Foundation
 
 class MusicService {
     static let shared = MusicService()
-    let baseURL = "https://api.deezer.com"  // Add this line
+    let baseURL = "https://api.deezer.com"  
     
     func fetchTopSongs(completion: @escaping (Result<[Song], Error>) -> Void) {
         let url = URL(string: "\(baseURL)/playlist/3155776842/tracks")!
         
         URLSession.shared.dataTask(with: url) { data, _, error in
-            DispatchQueue.main.async {  // Fix closure syntax
+            DispatchQueue.main.async {  
                 if let error = error {
                     completion(.failure(error))
                     return
@@ -38,7 +38,6 @@ class MusicService {
         }.resume()
     }
     
-    // Similar fix for searchSongs function
     func searchSongs(query: String, completion: @escaping (Result<[Song], Error>) -> Void) {
         let encodedQuery = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
         let url = URL(string: "\(baseURL)/search?q=\(encodedQuery)")!
