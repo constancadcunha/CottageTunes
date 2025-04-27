@@ -7,17 +7,15 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             ZStack(alignment: .bottom) {
-                // Background
                 LinearGradient(
                     gradient: Gradient(colors: [Color("CottageCream"), Color("CottageMist")]),
                     startPoint: .top,
                     endPoint: .bottom
                 )
                 .ignoresSafeArea()
-                
-                // Main Content
+
                 VStack(spacing: 0) {
-                    // Floral Header
+
                     HStack {
                         Text("Cottage Tunes")
                             .font(.custom("SnellRoundhand-Bold", size: 32))
@@ -34,7 +32,6 @@ struct ContentView: View {
                     .padding(.top, 12)
                     .padding(.bottom, 8)
                     
-                    // Enhanced Search Bar with Flowers
                     ZStack {
                         SearchBar(viewModel: viewModel)
                             .padding(.horizontal, 20)
@@ -48,7 +45,7 @@ struct ContentView: View {
                     }
                     .padding(.bottom, 8)
                     
-                    // Tab Content
+                    
                     TabView(selection: $selectedTab) {
                         ExploreView(viewModel: viewModel)
                             .tag(0)
@@ -58,7 +55,7 @@ struct ContentView: View {
                     }
                     .tabViewStyle(.page(indexDisplayMode: .never))
                     
-                    // Cottage-Style Tab Bar
+                    
                     HStack(spacing: 0) {
                         TabButton(
                             icon: "music.note.list",
@@ -93,7 +90,7 @@ struct ContentView: View {
                     .padding(.bottom, 8)
                 }
                 
-                // Now Playing Bar
+                
                 if let currentSong = viewModel.currentlyPlaying {
                     NowPlayingBar(song: currentSong, viewModel: viewModel)
                         .transition(.move(edge: .bottom))
