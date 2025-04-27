@@ -16,7 +16,7 @@ struct NowPlayingBar: View {
                 .frame(height: 2)
             
             HStack(spacing: 16) {
-                // Album art
+               
                 AsyncImage(url: URL(string: song.albumArtURL)) { image in
                     image.resizable()
                         .aspectRatio(contentMode: .fill)
