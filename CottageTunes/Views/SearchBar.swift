@@ -6,11 +6,11 @@ struct SearchBar: View {
     
     var body: some View {
         HStack(spacing: 12) {
-            // Search Icon
+            
             Image(systemName: "magnifyingglass")
                 .foregroundColor(Color("CottageGreen"))
             
-            // Text Field
+            
             TextField("Search songs...", text: $viewModel.searchText)
                 .focused($isFocused)
                 .font(.custom("Georgia", size: 16))
@@ -20,7 +20,7 @@ struct SearchBar: View {
                     viewModel.search()
                 }
             
-            // Clear Button
+            
             if !viewModel.searchText.isEmpty {
                 Button(action: {
                     viewModel.searchText = ""
