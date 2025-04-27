@@ -11,9 +11,9 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		7A53035C2DBE5055000EE88E /* FavoriteSongList */ = {
+		7A53035C2DBE5055000EE88E /* CottageTunes */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = FavoriteSongList;
+			path = CottageTunes;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -32,7 +32,7 @@
 		7A5303512DBE5055000EE88E = {
 			isa = PBXGroup;
 			children = (
-				7A53035C2DBE5055000EE88E /* FavoriteSongList */,
+				7A53035C2DBE5055000EE88E /* CottageTunes */,
 				7A53035B2DBE5055000EE88E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,7 +61,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				7A53035C2DBE5055000EE88E /* FavoriteSongList */,
+				7A53035C2DBE5055000EE88E /* CottageTunes */,
 			);
 			name = FavoriteSongList;
 			packageProductDependencies = (
@@ -247,7 +247,6 @@
 		7A53036B2DBE5056000EE88E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -274,7 +273,6 @@
 		7A53036C2DBE5056000EE88E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
