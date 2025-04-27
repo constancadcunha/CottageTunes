@@ -5,7 +5,7 @@ struct FavoritesView: View {
     
     var body: some View {
         ZStack {
-            // Background
+            
             LinearGradient(
                 gradient: Gradient(colors: [Color("CottageCream"), Color("CottageMist")]),
                 startPoint: .top,
@@ -13,7 +13,7 @@ struct FavoritesView: View {
             )
             .edgesIgnoringSafeArea(.all)
             
-            // Content
+            
             if viewModel.favorites.isEmpty {
                 emptyStateView
             } else {
@@ -43,7 +43,7 @@ struct FavoritesView: View {
             LazyVStack(spacing: 16) {
                 ForEach(viewModel.favorites) { song in
                     HStack(spacing: 16) {
-                        // Album Cover
+                        
                         AsyncImage(url: URL(string: song.albumArtURL)) { image in
                             image.resizable()
                                 .aspectRatio(contentMode: .fill)
@@ -61,7 +61,7 @@ struct FavoritesView: View {
                             .cornerRadius(8)
                         }
                         
-                        // Song Info
+                        
                         VStack(alignment: .leading, spacing: 4) {
                             Text(song.title)
                                 .font(.custom("Georgia-Bold", size: 16))
@@ -75,7 +75,7 @@ struct FavoritesView: View {
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
                         
-                        // Play Button
+                        
                         Button(action: {
                             viewModel.playPause(song)
                         }) {
