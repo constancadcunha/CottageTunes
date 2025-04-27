@@ -8,7 +8,7 @@ struct ExploreView: View {
             LazyVStack(spacing: 12) {
                 ForEach(viewModel.songs) { song in
                     HStack(spacing: 16) {
-                        // Album Art from API
+                        
                         AsyncImage(url: URL(string: song.albumArtURL)) { phase in
                             if let image = phase.image {
                                 image.resizable()
@@ -73,7 +73,7 @@ struct ExploreView: View {
                 }
             }
             .padding(.top, 12)
-            .padding(.bottom, 80) // Space for now playing bar
+            .padding(.bottom, 80) 
         }
     }
 }
