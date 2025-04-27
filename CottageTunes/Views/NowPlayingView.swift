@@ -62,7 +62,7 @@ struct NowPlayingView: View {
             }
             .padding(.horizontal)
             
-            // Controls
+            
             HStack(spacing: 40) {
                 Button(action: {}) {
                     Image(systemName: "backward.fill")
